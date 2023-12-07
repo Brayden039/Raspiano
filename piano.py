@@ -15,6 +15,7 @@ sound_2 = pygame.mixer.Sound("path/to/sound_2.wav")
 key_sound_mapping = {
     pygame.K_1: sound_1,
     pygame.K_2: sound_2,
+    #the key to the right of the _ is the one that needs pressed. _z to press z to play a sound
     # Add more key mappings as needed
 }
 
