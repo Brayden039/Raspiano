@@ -8,16 +8,15 @@ pygame.init()
 pygame.mixer.init()
 
 # Load sounds (replace these with your own sound files)
-sound_1 = pygame.mixer.Sound("path/to/sound_1.wav")
-sound_2 = pygame.mixer.Sound("path/to/sound_2.wav")
-
+sound_1 = pygame.mixer.Sound("mixkit-atm-cash-machine-key-press-2841.wav")
 # Define the key-to-sound mapping
 key_sound_mapping = {
     pygame.K_1: sound_1,
-    pygame.K_2: sound_2,
     #the key to the right of the _ is the one that needs pressed. _z to press z to play a sound
     # Add more key mappings as needed
 }
+
+display = pygame.display.set_mode((300, 300))
 
 # Main loop
 running = True
