@@ -22,22 +22,23 @@ sound_10 = pygame.mixer.Sound("mixkit-atm-cash-machine-key-press-2841.wav")
 
 # Define the key-to-sound mapping
 key_sound_mapping = {
-    pygame.K_1: sound_1,
-    pygame.K_2: sound_2,
-    pygame.K_3: sound_3,
-    pygame.K_4: sound_4,
-    pygame.K_5: sound_5,
-    pygame.K_6: sound_6,
-    pygame.K_7: sound_7,
-    pygame.K_8: sound_8,
-    pygame.K_9: sound_9,
-    pygame.K_0: sound_10,
+     pygame.K_1: (sound_1, channels[0]),
+    pygame.K_2: (sound_2, channels[1]),
+    pygame.K_3: (sound_3, channels[2]),
+    pygame.K_4: (sound_4, channels[3]),
+    pygame.K_5: (sound_5, channels[4]),
+    pygame.K_6: (sound_6, channels[5]),
+    pygame.K_7: (sound_7, channels[6]),
+    pygame.K_8: (sound_8, channels[7]),
+    pygame.K_9: (sound_9, channels[8]),
+    pygame.K_0: (sound_10, channels[9]),
     # Add more key mappings as needed
 }
 
 # Set up mixer channels
-num_channels = 12  # Adjust based on your needs
-channels = [pygame.mixer.Channel(i) for i in range(num_channels)]
+channels = []  # Adjust based on your needs
+for i in range(2):
+        channels.append(pygame.mixer.Channel(i))
 
 # Set up the display
 pygame.display.set_caption("Raspiano Music")
